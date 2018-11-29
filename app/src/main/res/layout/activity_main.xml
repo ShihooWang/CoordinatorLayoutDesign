@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="false"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingtoolbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:fitsSystemWindows="false"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            >
+
+
+
+            <ImageView
+                android:id="@+id/main.backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/girl1"
+                app:layout_collapseMode="parallax"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:titleTextAppearance="@style/toolbar_title_text"
+                app:theme="@style/toolbar_theme"
+                />
+                <!--此处这样设置无用-->
+                <!--app:titleTextColor="@color/colorAccent"-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/merge_course_introduce"/>
+            <include layout="@layout/merge_course_info"/>
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom"
+        android:id="@+id/text_load_play"
+        android:text="安排课程"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        app:layout_behavior="@string/behavior_footer"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:background="#11000000"
+        android:layout_height="50dp">
+        <!--android:layout_height="250dp">-->
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/image_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_img_train_edit_white"
+                android:paddingRight="12dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center_vertical"
+                />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:id="@+id/image_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_img_train_share"
+                android:paddingRight="12dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

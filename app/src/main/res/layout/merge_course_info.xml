@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#343434"
+            android:layout_marginLeft="16dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="课程内容"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            android:textColor="#444444"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#343434"
+            android:layout_marginLeft="16dp"
+            />
+    </LinearLayout>
+
+
+</merge>
